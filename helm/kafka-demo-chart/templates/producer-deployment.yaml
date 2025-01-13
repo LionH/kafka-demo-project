@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: producer
+spec:
+  replicas: {{ .Values.producer.replicaCount }}
+  selector:
+    matchLabels:
+      app: producer
+  template:
+    metadata:
+      labels:
+        app: producer
+    spec:
+      containers:
+        - name: producer
+          image: {{ .Values.producer.image }}
+          imagePullPolicy: Never
+          env:
+            - name: KAFKA_BOOTSTRAP_SERVERS
+              value: {{ .Values.producer.env.KAFKA_BOOTSTRAP_SERVERS }}
+            - name: KAFKA_TOPIC
+              value: {{ .Values.producer.env.KAFKA_TOPIC }}

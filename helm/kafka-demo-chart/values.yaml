@@ -1,0 +1,18 @@
+kafka:
+  image: bitnami/kafka:latest
+  replicaCount: 1
+
+producer:
+  image: kafka-producer:latest
+  replicaCount: 1
+  env:
+    KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+    KAFKA_TOPIC: demo-topic
+
+consumer:
+  image: kafka-consumer:latest
+  replicaCount: 1
+  env:
+    KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+    KAFKA_TOPIC: demo-topic
+    KAFKA_GROUP_ID: demo-group

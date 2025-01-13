@@ -1,5 +1,0 @@
-kafka:
-  bootstrap-servers: kafka:9092
-  topic: demo-topic
-  consumer:
-    group-id: demo-group

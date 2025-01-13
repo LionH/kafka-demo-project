@@ -1,6 +1,0 @@
-kafka:
-  bootstrap-servers: kafka:9092
-  topic: demo-topic
-  producer:
-    message-count: 10
-    delay-ms: 500

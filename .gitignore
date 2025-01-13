@@ -1,0 +1,46 @@
+# Gradle build files
+.gradle/
+build/
+
+# IntelliJ IDEA project files
+*.iml
+.idea/
+out/
+
+# Kotlin/Java build files
+*.class
+*.jar
+*.war
+*.ear
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Docker-related files
+*.env
+*.dockerfile
+docker-compose.override.yml
+
+# Kubernetes and Helm
+helm/kafka-demo-chart/charts/
+helm/kafka-demo-chart/values.yaml.override
+*.tgz
+
+# Exclude specific module build directories
+producer/build/
+consumer/build/
+
+# Ignore local test reports
+reports/
+test-results/
+
